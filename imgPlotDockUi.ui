@@ -36,26 +36,6 @@
           </sizepolicy>
          </property>
         </widget>
-        <widget class="QWebEngineView" name="widget">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-           <horstretch>1</horstretch>
-           <verstretch>1</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>500</width>
-           <height>500</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-        </widget>
        </widget>
       </item>
       <item>
@@ -220,12 +200,6 @@
   </action>
  </widget>
  <customwidgets>
-  <customwidget>
-   <class>QWebEngineView</class>
-   <extends>QWidget</extends>
-   <header location="global">QtWebEngineWidgets/QWebEngineView</header>
-   <container>1</container>
-  </customwidget>
   <customwidget>
    <class>DockArea</class>
    <extends>QWidget</extends>

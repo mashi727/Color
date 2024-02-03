@@ -16,7 +16,6 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtWidgets import (QApplication, QGridLayout, QHBoxLayout, QHeaderView,
     QLabel, QMainWindow, QMenu, QMenuBar,
     QPushButton, QSizePolicy, QSpacerItem, QSplitter,
@@ -62,16 +61,6 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.dockWidget.sizePolicy().hasHeightForWidth())
         self.dockWidget.setSizePolicy(sizePolicy1)
         self.splitter.addWidget(self.dockWidget)
-        self.widget = QWebEngineView(self.splitter)
-        self.widget.setObjectName(u"widget")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        sizePolicy2.setHorizontalStretch(1)
-        sizePolicy2.setVerticalStretch(1)
-        sizePolicy2.setHeightForWidth(self.widget.sizePolicy().hasHeightForWidth())
-        self.widget.setSizePolicy(sizePolicy2)
-        self.widget.setMinimumSize(QSize(500, 500))
-        self.widget.setMaximumSize(QSize(16777215, 16777215))
-        self.splitter.addWidget(self.widget)
 
         self.horizontalLayout.addWidget(self.splitter)
 
@@ -90,11 +79,11 @@ class Ui_MainWindow(object):
 
         self.treeView = QTreeView(self.centralwidget)
         self.treeView.setObjectName(u"treeView")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Ignored, QSizePolicy.Expanding)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.treeView.sizePolicy().hasHeightForWidth())
-        self.treeView.setSizePolicy(sizePolicy3)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Ignored, QSizePolicy.Expanding)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.treeView.sizePolicy().hasHeightForWidth())
+        self.treeView.setSizePolicy(sizePolicy2)
         self.treeView.setMinimumSize(QSize(350, 458))
         self.treeView.setMaximumSize(QSize(350, 16777215))
         font = QFont()
@@ -111,8 +100,8 @@ class Ui_MainWindow(object):
 
         self.textBrowser = QTextBrowser(self.centralwidget)
         self.textBrowser.setObjectName(u"textBrowser")
-        sizePolicy3.setHeightForWidth(self.textBrowser.sizePolicy().hasHeightForWidth())
-        self.textBrowser.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.textBrowser.sizePolicy().hasHeightForWidth())
+        self.textBrowser.setSizePolicy(sizePolicy2)
         self.textBrowser.setMinimumSize(QSize(350, 0))
         self.textBrowser.setMaximumSize(QSize(350, 200))
 
